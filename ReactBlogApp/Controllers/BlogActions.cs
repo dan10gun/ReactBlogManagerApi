@@ -91,9 +91,9 @@ namespace ReactBlogApp.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("Login")]
-        public async Task<IActionResult> Login([FromQuery] LoginRequest request)
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
             LoginResponse response = new LoginResponse();
             try
